@@ -1,4 +1,4 @@
-const messageDecoder = require('../../lib/utils/messageDecoder');
+const { messageDecoder } = require('../../lib/utils/messageDecoder');
 
 describe('message decoder tests', () => {
   let body = null;
