@@ -10,6 +10,5 @@ mongoose.connect(process.env.MONGODB_URI, {
 app.listen(54321, () => {
   console.log('You are listening to smooooth jazz on `54321`');
   mongoose.connection.dropDatabase();
-
 });
 
