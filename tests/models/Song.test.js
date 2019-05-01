@@ -2,13 +2,12 @@ const mongoose = require('mongoose');
 const Song = require('../../lib/models/Song');
 
 describe('Song model', () => {
-  const uid = new mongoose.Types.ObjectId;
-  it('has Title, Artist, Album and User fields', () => {
+  it('has Title, Artist, Album, and url fields', () => {
     const song = new Song({
       title: 'Wish You Were Here',
       artist: 'Pink Floyd',
       album: 'Wish You Were Here',
-      user: uid
+      url: 'gronk url'
     });
 
 
@@ -16,27 +15,27 @@ describe('Song model', () => {
       title: 'Wish You Were Here',
       artist: 'Pink Floyd',
       album: 'Wish You Were Here',
-      user: uid,
+      url: 'gronk url',
       _id: expect.any(mongoose.Types.ObjectId)
     });
   });
-  it('requires title and user fields', () => {
+  it('requires title and url fields', () => {
     const song = new Song({});
 
     const errors = song.validateSync().errors;
     expect(errors.title.message).toBe('Path `title` is required.');
-    expect(errors.user.message).toBe('Path `user` is required.');
+    expect(errors.url.message).toBe('Path `url` is required.');
   });
   it('has default album and artist', () => {
     const song = new Song({
       title: 'Wish You Were Here',
-      user: uid
+      url: 'gronk url'
     });
     expect(song.toJSON()).toEqual({
       title: 'Wish You Were Here',
       artist: 'Unknown Artist',
       album: 'Unknown Album',
-      user: uid,
+      url: 'gronk url',
       _id: expect.any(mongoose.Types.ObjectId)
     });
   });
