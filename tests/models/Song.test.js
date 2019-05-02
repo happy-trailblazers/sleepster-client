@@ -2,12 +2,13 @@ const mongoose = require('mongoose');
 const Song = require('../../lib/models/Song');
 
 describe('Song model', () => {
-  it('has Title, Artist, Album, and url fields', () => {
+  it('has Title, Artist, Album, Path, and url fields', () => {
     const song = new Song({
       title: 'Wish You Were Here',
       artist: 'Pink Floyd',
       album: 'Wish You Were Here',
-      url: 'gronk url'
+      url: 'gronk url',
+      songPath: 'testpath'
     });
 
 
@@ -16,6 +17,7 @@ describe('Song model', () => {
       artist: 'Pink Floyd',
       album: 'Wish You Were Here',
       url: 'gronk url',
+      songPath: 'testpath',
       _id: expect.any(mongoose.Types.ObjectId)
     });
   });
