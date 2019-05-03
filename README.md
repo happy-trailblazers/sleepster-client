@@ -13,6 +13,7 @@ A peer-to-peer file transfer system using Node.js, hosted on AWS.
 * inquirer
 * mongoose
 * ngrok
+* figlet
 
 
 ### Contributors: 
