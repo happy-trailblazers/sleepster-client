@@ -2,15 +2,9 @@
   "name": "sleepster",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "client.js",
   "scripts": {
-    "test": "jest --ci --verbose --runInBand",
-    "test:watch": "npm run test -- --watch",
-    "start": "node server.js",
-    "start:watch": "nodemon server.js"
-  },
-  "jest": {
-    "testEnvironment": "node"
+    "start": "node client.js"
   },
   "repository": {
     "type": "git",
