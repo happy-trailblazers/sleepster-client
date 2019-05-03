@@ -2,10 +2,10 @@ const net = require('net');
 const fs = require('fs');
 const fsPromise = require('fs').promises;
 const ngrok = require('ngrok');
-const { messageDecoder } = require('./utils/messageDecoder');
-const clientSwitchBoards = require('./utils/clientSwitchBoards');
-const firstQuestions = require('./inquirer/welcome');
-const readMusicDirectory = require('./utils/readMusicDirectory');
+const { messageDecoder } = require('./lib/utils/messageDecoder');
+const clientSwitchBoards = require('./lib/utils/clientSwitchBoards');
+const firstQuestions = require('./lib/inquirer/welcome');
+const readMusicDirectory = require('./lib/utils/readMusicDirectory');
 
 const client = net.createConnection(54321, '18.219.224.129', async() => {
   const pathOptions = await firstQuestions();
