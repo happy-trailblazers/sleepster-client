@@ -28,7 +28,8 @@ const client = net.createConnection(54321, '18.219.224.129', async() => {
   try {
     url = await ngrok.connect({
       proto: 'tcp',
-      port: 8080
+      port: 8080,
+      binPath: () => './'
     });
   } catch(err){
     //eslint-disable-next-line no-console
