@@ -1,5 +1,7 @@
 # SLEEPSTER
 
+## This is the client only!
+
 A peer-to-peer file transfer system using Node.js, hosted on AWS. 
 
 ### Before Running
@@ -11,7 +13,6 @@ A peer-to-peer file transfer system using Node.js, hosted on AWS.
 ### Dependencies: 
 * fuse.js
 * inquirer
-* mongoose
 * ngrok
 * figlet
 
