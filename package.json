@@ -6,6 +6,10 @@
   "scripts": {
     "start": "node client.js"
   },
+  "bin": "client.js",
+  "pkg": {
+    "assets": "node_modules/figlet/fonts/*"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/happy-trailblazers/sleepster.git"
